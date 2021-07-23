@@ -1,0 +1,56 @@
+SLICE METHOD 
+This returns a new array from the orginal array without mutating it. it's just like taking some parts of array from the original array.
+
+SPLICE METHOD
+This type of array method mutates the original array. i.e it takes out the values that we spacified permanently. The original array looses the part that was extracted. This method takes two parameters the first one is where we want it to start while the second one is the number of count which is number of element to delete
+
+REVERSE METHOD
+As the name implies the reverse method reverses the array and it also mutates the original array.
+
+CONCAT METHOD
+This one combines two arrays. Remember joining two arrays can be archived by using the spread operator like this[...ary, ...ary2];
+ 
+THE FOREACH METHOD  
+This method calls a function (callback function) in each iteration of the array value using the chaning the argument in each iteration. This method is call a higher level function because it's a function that call another function. Note: the entries method returns array of an array(index and value as an array). 
+One cool thing about the forEach method is that it does not pass only the value of the array it passes in the value of the array, the index of the array, and the array it self. The callback function takes in the this three values as a parameter the first parameter is the value of the array, the second one is the current index while the last one the entire array. The method does not break out i.e it does'nt stop until it completes the loop. use the for loop when you need to break out of loop. 
+
+FOREACH ON MAP OBJECTS
+When the forEach method is used on map it call three parameters which are value, key and the map. It works just like that of array.
+
+FOREACH ON SET OBJECTS
+Here there some problems with it. Sets do not have any indexs, and keys. they use there value name as key.
+
+DATA TRANSFORMATION
+In js there are three array method used for data transformation which are map, filter, and reduce.
+
+Map method maps the orginal array and produce a new array from it i.e if performs an action on it which after that it returns a new array. this method has access to the value, index and the array.
+
+Filter method returns a new array besed on a condition i.e the array value that pass the test will be included in the new array. All other elements will be filtered out.
+
+Reduce method bolls down all the array value into on single element. No array is being returned here only the reduced value. this method takes two paramenter which is the callback function and the inital value of the accumulator. the call back function takes four parameters which are accumulator, the current value, the current index and the array itself.
+
+THE FIND METHOD
+this method can be used to retrive one element of an array based on a condition. This method accepts a callback function which takes three parameters as well. this method does not return an array but the first elemet in the array that satisfie the condition. It works just like the filter method just that it returns just one element and not array.
+
+THE FIND INDEX METHOD
+This method works almost like the find method but this one just returns the index of the found element and not the element itself. Both the find and findindex method have access to the current value, index and array.
+
+THE SOME AND EVERY METHOD
+some method works just like the includes method which returns true if the there's any value matching the value being passed in or checked. the some method returns ture if there are values that match the condition passed in. The only different btw the two is that the includes method checks for only equlity while that of some we can pass in a condition.
+
+every method is similar to the some method just that the every method returns true when all the element in the array satisfy the condition passed.
+
+THE FLAT AND FLATMAP METHOD
+The flat method condenses an array of array or nested array into one big array. e.g const arr = [1,2,[8, 3, 9], 9, 29, [2,1,4,5]2, [3, 9]]; this example is going to return an array with all the values when we attach the flat method on it. the flat method does not take a callback function. (arr.flat());
+The flat method only goes one level deep which is the default but if we want to make it go deeper we pass in a number argument specifying how deep the flat method should go.(arr.flat(number));
+
+The flatMap method maps an array then flattens them. The flatMap method only goes one level deeper i.e it can't exceed that.
+
+THE SORT METHOD
+This method mutates the original array. for alphabet it sorts it from A - Z. this method do not work on numbers(because it treats them as (it converts the whole values to string)strings asin if you have 100 and 2 as value 100 comes first because 1 come be for 2) but can be fixed by passing in a compare function as callback function in that array method.
+
+THE FILL METHOD
+This method helps you creat an array programatically. It works just like the splice method which takes the value of the value to be added, where it should start from and where it ends.
+
+THE ARRAY.FROM MEHTOD 
+This method is not being used on array directly. its a method that works on array constructor. it takes two parameter which is the Html collection and the map function.
